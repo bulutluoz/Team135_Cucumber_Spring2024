@@ -29,4 +29,7 @@ public class FaceBookPage {
 
     @FindBy(xpath = "//*[text()='Create new account']")
     public WebElement yeniKayitOlusturButonu;
+
+    @FindBy(name = "websubmit")
+    public WebElement signUpButonu;
 }
