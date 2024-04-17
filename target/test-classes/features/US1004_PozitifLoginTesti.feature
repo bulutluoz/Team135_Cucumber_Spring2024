@@ -1,4 +1,4 @@
-@wip
+
 Feature: US1004 gecerli bilgilerle giris yapilabilmeli
 
   Scenario: TC10 test datasi olarak verilen kullanici adi ve sifre ile
