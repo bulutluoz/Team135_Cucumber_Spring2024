@@ -9,7 +9,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@wip"
+        tags = "@wip",
+        dryRun = false
 )
 public class Runner {
     /*
@@ -29,6 +30,11 @@ public class Runner {
         features klasoru altinda
         tags olarak verilen tag'a sahip scenario'lari bulup
         glue olarak tanimlanan klasordeki Java kodlari ile calistirir
+
+        dryRun = true   secildiginde
+        Runner verilen testi CALISTIRMADAN
+        sadece eksik stepleri olusturur
+        eksik step yoksa, testi calistirmadan direk TestPassed olarak raporlanir
      */
 
 }

@@ -22,7 +22,7 @@ Feature: US1005 gecersiz bilgilerle giris yapilamamali
     Then giris yapilamadigini test eder
     And sayfayi kapatir
 
-  @wip
+
   Scenario: TC13 gecersiz username ve gecersiz password ile giris yapilamamali
 
     Given kullanici "toUrl" anasayfaya gider

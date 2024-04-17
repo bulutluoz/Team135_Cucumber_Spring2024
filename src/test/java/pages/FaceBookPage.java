@@ -5,25 +5,28 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class FaceBookLoginPage {
+public class FaceBookPage {
 
-    public FaceBookLoginPage(){
+    public FaceBookPage(){
 
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
     @FindBy(id ="email")
-    public WebElement emailKutusu;
+    public WebElement loginEmailKutusu;
 
     @FindBy(id="pass")
-    public WebElement passwordKutusu;
+    public WebElement loginPasswordKutusu;
 
     @FindBy(name = "login")
-    public WebElement loginButonu;
+    public WebElement loginSayfasiLoginButonu;
 
     @FindBy(className = "_9ay7")
-    public WebElement girisYapilamadiYaziElementi;
+    public WebElement loginsayfasiGirisYapilamadiYaziElementi;
 
     @FindBy(xpath = "//*[text()='Allow all cookies']")
     public WebElement cookiesKabulButonu;
+
+    @FindBy(xpath = "//*[text()='Create new account']")
+    public WebElement yeniKayitOlusturButonu;
 }

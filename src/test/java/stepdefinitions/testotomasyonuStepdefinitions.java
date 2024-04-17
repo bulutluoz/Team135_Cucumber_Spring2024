@@ -110,4 +110,6 @@ public class testotomasyonuStepdefinitions {
 
         Assert.assertTrue(testOtomasyonuPage.emailKutusu.isDisplayed());
     }
+
+
 }
