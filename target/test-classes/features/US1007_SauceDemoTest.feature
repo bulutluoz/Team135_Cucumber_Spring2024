@@ -10,6 +10,7 @@
       And 2 saniye bekler
       Then saucedemo login tusuna basar
       And ilk urunun ismini kaydeder ve bu urunun sayfasina gider
+      And 2 saniye bekler
       When saucedemo add to Cart butonuna basar
       Then saucedemo alisveris sepetine tiklar
       And 2 saniye bekler

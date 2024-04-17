@@ -22,7 +22,7 @@ public class SauceDemoPage {
     @FindBy(id = "item_4_title_link")
     public WebElement ilkUrunIsimElementi;
 
-    @FindBy(id = "add-to-cart-sauce-labs-backpack")
+    @FindBy(name = "add-to-cart")
     public WebElement addToCartButonu;
 
     @FindBy(className = "shopping_cart_link")
