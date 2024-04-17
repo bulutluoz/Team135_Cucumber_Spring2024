@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -8,6 +9,9 @@ import org.openqa.selenium.Keys;
 import pages.TestOtomasyonuPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
+
+import java.security.Key;
 
 public class testotomasyonuStepdefinitions {
 
@@ -37,5 +41,42 @@ public class testotomasyonuStepdefinitions {
     }
 
 
+    @When("arama kutusuna dress yazip enter tusuna basar")
+    public void aramaKutusunaDressYazipEnterTusunaBasar() {
+        testOtomasyonuPage.aramaKutusu.sendKeys("dress" + Keys.ENTER);
+    }
 
+    @When("arama kutusuna baby yazip enter tusuna basar")
+    public void aramaKutusunaBabyYazipEnterTusunaBasar() {
+        testOtomasyonuPage.aramaKutusu.sendKeys("baby" + Keys.ENTER);
+    }
+
+    @When("arama kutusuna java yazip enter tusuna basar")
+    public void aramaKutusunaJavaYazipEnterTusunaBasar() {
+        testOtomasyonuPage.aramaKutusu.sendKeys("java" + Keys.ENTER);
+    }
+
+    @Then("arama sonucunda urun bulunamadigini test eder")
+    public void aramaSonucundaUrunBulunamadiginiTestEder() {
+        int actualBulunanUrunSayisi = testOtomasyonuPage.bulunanUrunElementleriList.size();
+        Assert.assertEquals(0, actualBulunanUrunSayisi);
+    }
+
+    @When("arama kutusuna nutella yazip enter tusuna basar")
+    public void aramaKutusunaNutellaYazipEnterTusunaBasar() {
+
+        testOtomasyonuPage.aramaKutusu.sendKeys("nutella" + Keys.ENTER);
+    }
+
+    @When("arama kutusuna {string} yazip enter tusuna basar")
+    public void aramaKutusunaYazipEnterTusunaBasar(String aranacakKelime) {
+
+        testOtomasyonuPage.aramaKutusu.sendKeys(aranacakKelime + Keys.ENTER);
+    }
+
+    @And("{int} saniye bekler")
+    public void saniyeBekler(int saniye) {
+
+        ReusableMethods.bekle(saniye);
+    }
 }
