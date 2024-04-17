@@ -1,6 +1,6 @@
 
   Feature: US1006 Fake bilgilerle kullanici olusturma
-    @wip
+
     Scenario: TC14 Faker classi kullanarak facebook'da kayit olusturulabilmeli
 
       Given kullanici "faceUrl" anasayfaya gider
