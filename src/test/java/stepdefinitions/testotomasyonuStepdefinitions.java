@@ -79,4 +79,35 @@ public class testotomasyonuStepdefinitions {
 
         ReusableMethods.bekle(saniye);
     }
+
+    @Given("kullanici {string} anasayfaya gider")
+    public void kullanici_anasayfaya_gider(String istenenUrlAdi) {
+        Driver.getDriver().get(ConfigReader.getProperty(istenenUrlAdi));
+    }
+    @Then("account butonuna basar")
+    public void account_butonuna_basar() {
+       testOtomasyonuPage.accountLinki.click();
+    }
+    @Then("email olarak {string} girer")
+    public void email_olarak_girer(String kullanilacakEmailIsmi) {
+        testOtomasyonuPage.emailKutusu.sendKeys(ConfigReader.getProperty(kullanilacakEmailIsmi));
+    }
+    @Then("password olarak {string} girer")
+    public void password_olarak_girer(String kullanilacakPasswordIsmi) {
+       testOtomasyonuPage.passwordKutusu.sendKeys(ConfigReader.getProperty(kullanilacakPasswordIsmi));
+    }
+    @Then("signIn butonuna basar")
+    public void sign_in_butonuna_basar() {
+        testOtomasyonuPage.loginButonu.click();
+    }
+    @Then("basarili giris yapilabildigini test eder")
+    public void basarili_giris_yapilabildigini_test_eder() {
+       Assert.assertTrue(testOtomasyonuPage.logoutButonu.isDisplayed());
+    }
+
+    @Then("giris yapilamadigini test eder")
+    public void girisYapilamadiginiTestEder() {
+
+        Assert.assertTrue(testOtomasyonuPage.emailKutusu.isDisplayed());
+    }
 }
