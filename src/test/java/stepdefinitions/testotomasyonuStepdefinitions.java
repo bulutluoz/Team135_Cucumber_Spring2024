@@ -4,6 +4,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.apache.poi.ss.usermodel.*;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import pages.TestOtomasyonuPage;
@@ -11,6 +12,9 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.security.Key;
 
 public class testotomasyonuStepdefinitions {
@@ -120,5 +124,83 @@ public class testotomasyonuStepdefinitions {
     @And("password listesinden {string} girer")
     public void passwordListesindenGirer(String verilenPassword) {
         testOtomasyonuPage.passwordKutusu.sendKeys(verilenPassword);
+    }
+
+    @Then("{int}.satirdaki urunu aratir")
+    public void satirdakiUrunuAratir(int satirNo) throws IOException {
+
+        FileInputStream fileInputStream = new FileInputStream("src/test/resources/urunListesi.xlsx");
+        Workbook workBook = WorkbookFactory.create(fileInputStream);
+
+        Sheet sheet1 = workBook.getSheet("Sheet1");
+
+        String satirdakiUrunIsmi = sheet1.getRow(satirNo-1)
+                                            .getCell(0)
+                                            .toString();
+
+
+        testOtomasyonuPage.aramaKutusu.sendKeys(satirdakiUrunIsmi + Keys.ENTER);
+    }
+
+    @And("bulunan urun sayisinin {int}.satirdaki min urun sayisina esit veya daha fazla oldugunu test eder")
+    public void bulunanUrunSayisininSatirdakiMinUrunSayisinaEsitVeyaDahaFazlaOldugunuTestEder(int satirSayisi) throws IOException {
+
+        FileInputStream fileInputStream = new FileInputStream("src/test/resources/urunListesi.xlsx");
+        Workbook workBook = WorkbookFactory.create(fileInputStream);
+
+        Sheet sheet1 = workBook.getSheet("Sheet1");
+
+        double satirdakiMinUrunSayisi = sheet1
+                                        .getRow(satirSayisi-1)
+                                        .getCell(1)
+                                        .getNumericCellValue();
+
+        double actualBulunanUrunSayisi = testOtomasyonuPage.bulunanUrunElementleriList.size();
+
+        Assert.assertTrue(actualBulunanUrunSayisi >= satirdakiMinUrunSayisi);
+    }
+
+    @Then("exceldeki tum urunleri aratip, minumum urun sayisindan fazla urun bulundugunu test eder")
+    public void exceldekiTumUrunleriAratipMinumumUrunSayisindanFazlaUrunBulundugunuTestEder() throws IOException {
+
+        FileInputStream fileInputStream = new FileInputStream("src/test/resources/urunListesi.xlsx");
+
+        Workbook workbook = WorkbookFactory.create(fileInputStream);
+
+        Sheet sheet1 = workbook.getSheet("Sheet1");
+
+        boolean failedOlanVarmi = false;
+
+        for (int i = 1; i <= sheet1.getLastRowNum() ; i++) {
+
+            String satirdakiUrunIsmi = sheet1
+                                        .getRow(i)
+                                        .getCell(0)
+                                        .toString();
+
+            // satirdaki urun ismini to sayfasinda aratip, bulunan sonuc sayisini kaydedelim
+
+            testOtomasyonuPage.aramaKutusu.sendKeys(satirdakiUrunIsmi + Keys.ENTER);
+
+            double actualBulunanUrunSayisi = testOtomasyonuPage.bulunanUrunElementleriList.size();
+
+            double bulunacakMinimumUrunSayisi = sheet1
+                                                        .getRow(i)
+                                                        .getCell(1)
+                                                        .getNumericCellValue();
+            System.out.println(satirdakiUrunIsmi + " icin minumum bulunacak sayi : " + bulunacakMinimumUrunSayisi +
+                                                    ", actual bulunan urun sayisi : " + actualBulunanUrunSayisi);
+
+            try {
+                Assert.assertTrue(actualBulunanUrunSayisi >= bulunacakMinimumUrunSayisi);
+            } catch (AssertionError e) {
+                System.out.println(satirdakiUrunIsmi + " icin test FAILED oldu");
+                failedOlanVarmi = true;
+            }
+
+        }
+
+        Assert.assertFalse(failedOlanVarmi);
+
     }
 }

@@ -1,7 +1,7 @@
 Feature: US1011 Kullanici verilen gecersiz kullanici adi ve sifrelerle
   giris yapilamadigini test eder
 
-  @wip
+
   Scenario Outline: TC19 liste olarak verilen gecersiz bilgiler ile giris yapilamaz
 
     Given kullanici "toUrl" anasayfaya gider
@@ -13,6 +13,7 @@ Feature: US1011 Kullanici verilen gecersiz kullanici adi ve sifrelerle
     And giris yapilamadigini test eder
     And 1 saniye bekler
     Then sayfayi kapatir
+
     Examples:
       |verilenEmail    	|verilenPassword    	|
       |murat@akar.com  	|76jrf6 	|
