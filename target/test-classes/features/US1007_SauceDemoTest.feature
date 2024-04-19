@@ -1,6 +1,6 @@
 
   Feature: US1007 Kullanici sectigi urunu sepete ekleyebilmeli
-    @wip
+
     Scenario: TC15 Kullanici istedigi urunu sepete ekler
 
       Given kullanici "sauceUrl" anasayfaya gider
