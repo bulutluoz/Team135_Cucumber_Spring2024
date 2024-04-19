@@ -1,6 +1,6 @@
 Feature: US1014 exceldeki tum urunler icin minumum miktarda urun bulunabilmeli
 
-  @wip
+
   Scenario: TC21 exceldeki tum urunler aratildiginda
                  minimum miktar veya daha fazla urun bulunabilmeli
 
