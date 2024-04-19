@@ -112,4 +112,13 @@ public class testotomasyonuStepdefinitions {
     }
 
 
+    @When("email listesinden {string} girer")
+    public void emailListesindenGirer(String verilenEmail) {
+        testOtomasyonuPage.emailKutusu.sendKeys(verilenEmail);
+    }
+
+    @And("password listesinden {string} girer")
+    public void passwordListesindenGirer(String verilenPassword) {
+        testOtomasyonuPage.passwordKutusu.sendKeys(verilenPassword);
+    }
 }

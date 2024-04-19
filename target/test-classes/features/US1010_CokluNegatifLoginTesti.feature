@@ -1,7 +1,7 @@
 Feature: US1010 Kullanici verilen gecersiz kullanici adi ve sifrelerle
                 giris yapilamadigini test eder
 
-  @wip
+
   Scenario Outline: TC18 liste olarak verilen gecersiz bilgiler ile giris yapilamaz
 
     Given kullanici "toUrl" anasayfaya gider
