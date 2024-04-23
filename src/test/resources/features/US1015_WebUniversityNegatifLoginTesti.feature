@@ -1,6 +1,6 @@
 Feature: US1015 rastgele kullanici bilgileri ile giris yapilamaz
 
-
+  @E2E
   Scenario:TC22 fake kullanici ile giris yapilamamali
     Given kullanici "webUrl" anasayfaya gider
     Then Login Portal' a  kadar asagi iner

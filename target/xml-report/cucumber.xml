@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="74.021" tests="8" skipped="0" failures="1" errors="0">
+<testcase classname="US1002 Negatif arama testi" name="TC04 kullanici java arattiginda sonuc bulunamamali" time="15.45">
+<system-out><![CDATA[
+Given kullanici testotomasyonu anasayfaya gider.............................passed
+When arama kutusuna java yazip enter tusuna basar...........................passed
+Then arama sonucunda urun bulunamadigini test eder..........................passed
+And sayfayi kapatir.........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1002 Negatif arama testi" name="TC05 kullanici nutella arattiginda sonuc bulunamamali" time="14.547">
+<system-out><![CDATA[
+Given kullanici testotomasyonu anasayfaya gider.............................passed
+When arama kutusuna nutella yazip enter tusuna basar........................passed
+Then arama sonucunda urun bulunamadigini test eder..........................passed
+And sayfayi kapatir.........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1006 Fake bilgilerle kullanici olusturma" name="TC14 Faker classi kullanarak facebook'da kayit olusturulabilmeli" time="12.76">
+<failure type="org.openqa.selenium.ElementNotInteractableException" message="element not interactable
+  (Session info: chrome=124.0.6367.62)
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.4.1', java.version: '18.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [085eef88a8cbf8bb889588b2e5406bbb, clickElement {id=f.4BA180FD0983C18A81C5ED804479CA5C.d.A2B53F903A201B4846444A5579AE16F1.e.39}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.62, chrome: {chromedriverVersion: 124.0.6367.60 (8771130bd84f..., userDataDir: /var/folders/k5/tn4cs92s1h3...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63434}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:63434/devtoo..., se:cdpVersion: 124.0.6367.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (085eef88a8cbf8bb889588b2e5406bbb)] -&gt; xpath: //*[text()='Allow all cookies']]
+Session ID: 085eef88a8cbf8bb889588b2e5406bbb">
+<![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=124.0.6367.62)
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.4.1', java.version: '18.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [085eef88a8cbf8bb889588b2e5406bbb, clickElement {id=f.4BA180FD0983C18A81C5ED804479CA5C.d.A2B53F903A201B4846444A5579AE16F1.e.39}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.62, chrome: {chromedriverVersion: 124.0.6367.60 (8771130bd84f..., userDataDir: /var/folders/k5/tn4cs92s1h3...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63434}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:63434/devtoo..., se:cdpVersion: 124.0.6367.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (085eef88a8cbf8bb889588b2e5406bbb)] -> xpath: //*[text()='Allow all cookies']]
+Session ID: 085eef88a8cbf8bb889588b2e5406bbb
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
+	at stepdefinitions.facebookStepdefinitions.facebook_cookies_kabul_eder(facebookStepdefinitions.java:20)
+	at ✽.facebook cookies kabul eder(file:///Users/ahmetbulutluoz/Desktop/My%20Desktop/course/projeler/team135_Cucumber/src/test/resources/features/US1006_FacebookKayitTesti.feature:7)
+]]>
+</failure>
+<system-out><![CDATA[
+Given kullanici "faceUrl" anasayfaya gider..................................passed
+Then facebook cookies kabul eder............................................failed
+And facebook'da yeni hesap olustur butonuna basar...........................skipped
+And 1 saniye bekler.........................................................skipped
+When Faker class'indan bilgilerle facebook kayit formunu doldurur...........skipped
+Then 2 saniye bekler........................................................skipped
+And facebook kayit ol tusuna basar..........................................skipped
+Then 8 saniye bekler........................................................skipped
+And sayfayi kapatir.........................................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="US1010 Kullanici verilen gecersiz kullanici adi ve sifrelerle" name="TC18 liste olarak verilen gecersiz bilgiler ile giris yapilamaz - Example #1.1" time="6.509">
+<system-out><![CDATA[
+Given kullanici "toUrl" anasayfaya gider....................................passed
+Then account butonuna basar.................................................passed
+When email olarak "toGecerliEmail" girer....................................passed
+And password olarak "toGecersizPassword" girer..............................passed
+Then signIn butonuna basar..................................................passed
+And giris yapilamadigini test eder..........................................passed
+And 1 saniye bekler.........................................................passed
+Then sayfayi kapatir........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1010 Kullanici verilen gecersiz kullanici adi ve sifrelerle" name="TC18 liste olarak verilen gecersiz bilgiler ile giris yapilamaz - Example #1.2" time="6.313">
+<system-out><![CDATA[
+Given kullanici "toUrl" anasayfaya gider....................................passed
+Then account butonuna basar.................................................passed
+When email olarak "toGecersizEmail" girer...................................passed
+And password olarak "toGecerliPassword" girer...............................passed
+Then signIn butonuna basar..................................................passed
+And giris yapilamadigini test eder..........................................passed
+And 1 saniye bekler.........................................................passed
+Then sayfayi kapatir........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1010 Kullanici verilen gecersiz kullanici adi ve sifrelerle" name="TC18 liste olarak verilen gecersiz bilgiler ile giris yapilamaz - Example #1.3" time="6.126">
+<system-out><![CDATA[
+Given kullanici "toUrl" anasayfaya gider....................................passed
+Then account butonuna basar.................................................passed
+When email olarak "toGecersizEmail" girer...................................passed
+And password olarak "toGecersizPassword" girer..............................passed
+Then signIn butonuna basar..................................................passed
+And giris yapilamadigini test eder..........................................passed
+And 1 saniye bekler.........................................................passed
+Then sayfayi kapatir........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1010 Kullanici verilen gecersiz kullanici adi ve sifrelerle" name="TC18 liste olarak verilen gecersiz bilgiler ile giris yapilamaz - Example #1.4" time="6.106">
+<system-out><![CDATA[
+Given kullanici "toUrl" anasayfaya gider....................................passed
+Then account butonuna basar.................................................passed
+When email olarak "toGecersizEmail2" girer..................................passed
+And password olarak "toGecersizPassword2" girer.............................passed
+Then signIn butonuna basar..................................................passed
+And giris yapilamadigini test eder..........................................passed
+And 1 saniye bekler.........................................................passed
+Then sayfayi kapatir........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1010 Kullanici verilen gecersiz kullanici adi ve sifrelerle" name="TC18 liste olarak verilen gecersiz bilgiler ile giris yapilamaz - Example #1.5" time="6.081">
+<system-out><![CDATA[
+Given kullanici "toUrl" anasayfaya gider....................................passed
+Then account butonuna basar.................................................passed
+When email olarak "toGecersizEmail3" girer..................................passed
+And password olarak "toGecersizPassword3" girer.............................passed
+Then signIn butonuna basar..................................................passed
+And giris yapilamadigini test eder..........................................passed
+And 1 saniye bekler.........................................................passed
+Then sayfayi kapatir........................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

@@ -1,4 +1,4 @@
-
+  @sistem
   Feature: US1006 Fake bilgilerle kullanici olusturma
 
     Scenario: TC14 Faker classi kullanarak facebook'da kayit olusturulabilmeli

@@ -1,4 +1,5 @@
 
+@sistem
 Feature: US1002 Negatif arama testi
   # Eger her scenario'nun basinda belirli adimlar ayni ise
   # bu adimlari Background: olarak tanimlayabiliriz

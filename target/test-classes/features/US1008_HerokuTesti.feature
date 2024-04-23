@@ -1,6 +1,7 @@
 Feature: US1008 Kullanici delete butonunun calistigini test eder
 
 
+  @smoke
   Scenario: TC16 Delete butonunun calistigini tesyt eder
 
     Given kullanici "heroUrl" anasayfaya gider

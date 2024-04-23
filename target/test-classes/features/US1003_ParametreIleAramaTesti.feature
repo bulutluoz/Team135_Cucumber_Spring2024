@@ -4,6 +4,7 @@ Feature: US1003 kullanici parametre olarak verilen urunun sitede bulundugunu tes
   # step yazilirken " " icerisinde yazilan kelimeler ve int sayilar
   # parametre olarak kabul edilir ve dinamik kod yazilir
 
+  @E2E
   Scenario: TC07 Kullanici parametre ile phone aratabilmeli
     Given kullanici testotomasyonu anasayfaya gider
     When arama kutusuna "phone" yazip enter tusuna basar
