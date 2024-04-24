@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="4.168" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="US1019 Kullanici istedigi satir ve sutundaki datayi yazdirir" name="TC26 parametre olarak verilen satir ve sutundaki data yazdirilabilmeli" time="4.078">
+<testsuite name="Cucumber" time="2.828" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="US1020 excelde istenen gorevleri yapma" name="TC27 kullanici excelden istenen bilgileri alabilmeli" time="2.711">
+<failure/>
 <system-out><![CDATA[
-Given kullanici "demoUrl" anasayfaya gider..................................passed
-And 5. satir, 1. sutundaki datayi yazdirir..................................passed
-And "tum tablo" ismi ile tum sayfa screenshot kaydeder......................passed
+Given kullanici baskentler exceline ulasir..................................undefined
+Then 1.satir 2.hucredeki datayi yazdirir....................................skipped
+And 1.satir 2.hucredeki datayi bir string degiskene kaydeder................skipped
+And kaydedilen datanin "Başkent (İngilizce)" oldugunu test eder.............skipped
+Then baskenti Jakarta olan ulkenin Turkce isminin "Endonezya" oldugunu test eder.skipped
+And excelde kayitli ulke sayisinin 190 oldugunu test eder...................skipped
+And excelde kullanilan fiziki satir sayisinin 191 oldugunu test eder........skipped
+When Tum bilgileri map olarak kaydedip......................................skipped
+Then baskenti Jakarta olan ulkenin tum bilgilerini yazdirir.................skipped
+And mapi kullanarak turkce ismi Hollanda olan bir ulke bulundugunu test eder.skipped
 ]]></system-out>
 </testcase>
 </testsuite>
