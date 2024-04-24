@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="17.959" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="US1018 Kullanici girdigi bilgilerle yeni kayit olusturur" name="TC25 yeni kayit olusturup, kayit olustugu test eder" time="17.845">
+<testsuite name="Cucumber" time="4.168" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="US1019 Kullanici istedigi satir ve sutundaki datayi yazdirir" name="TC26 parametre olarak verilen satir ve sutundaki data yazdirilabilmeli" time="4.078">
 <system-out><![CDATA[
-Given kullanici "autoExerciseUrl" anasayfaya gider..........................passed
-And 1 saniye bekler.........................................................passed
-And user sign up linkine tiklar.............................................passed
-And 1 saniye bekler.........................................................passed
-And user Create an account bolumune email adresi girer......................passed
-And 1 saniye bekler.........................................................passed
-And signUp butonuna basar...................................................passed
-And 1 saniye bekler.........................................................passed
-And user kisisel bilgilerini ve iletisim bilgilerini girer..................passed
-And user Create Account butonuna basar......................................passed
-Then hesap olustugunu test eder.............................................passed
-And 3 saniye bekler.........................................................passed
+Given kullanici "demoUrl" anasayfaya gider..................................passed
+And 5. satir, 1. sutundaki datayi yazdirir..................................passed
+And "tum tablo" ismi ile tum sayfa screenshot kaydeder......................passed
 ]]></system-out>
 </testcase>
 </testsuite>

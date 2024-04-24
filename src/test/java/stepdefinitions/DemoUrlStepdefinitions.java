@@ -1,7 +1,9 @@
 package stepdefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import pages.DemoUrlPage;
 import utilities.Driver;
@@ -54,16 +56,27 @@ public class DemoUrlStepdefinitions {
                 System.out.println(ReusableMethods.stringListeDonustur(istenenSutundakiElementlerListesi));
             }
 
-
         }
 
+    }
 
+    @And("{int}. satir, {int}. sutundaki datayi yazdirir")
+    public void satirSutundakiDatayiYazdirir(int satirNo, int sutunNo) {
 
+        //          (//tbody)[2]/tr[  5  ]/td[   1  ]
 
+        String dinamikXpath = "(//tbody)[2]/tr["+ satirNo + "]/td[" + sutunNo + "]";
 
+        WebElement istenenDataElementi =
+                Driver.getDriver().findElement(By.xpath(dinamikXpath));
 
+        System.out.println(istenenDataElementi.getText());
 
+    }
 
+    @And("{string} ismi ile tum sayfa screenshot kaydeder")
+    public void ismiIleTumSayfaScreenshotKaydeder(String raporIsmi) {
 
+        ReusableMethods.tumSayfaScreenshot(Driver.getDriver(),raporIsmi);
     }
 }

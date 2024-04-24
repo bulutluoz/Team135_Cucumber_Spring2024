@@ -1,7 +1,7 @@
 
 Feature:US1018 Kullanici girdigi bilgilerle yeni kayit olusturur
 
-  @wip
+
   Scenario: TC25 yeni kayit olusturup, kayit olustugu test eder
 
     Given kullanici "autoExerciseUrl" anasayfaya gider
