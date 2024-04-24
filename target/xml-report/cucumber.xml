@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="16.691" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="US1018 Kullanici girdigi bilgilerle yeni kayit olusturur" name="TC25 yeni kayit olusturup, kayit olustugu test eder" time="16.577">
+<testsuite name="Cucumber" time="17.959" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="US1018 Kullanici girdigi bilgilerle yeni kayit olusturur" name="TC25 yeni kayit olusturup, kayit olustugu test eder" time="17.845">
 <system-out><![CDATA[
 Given kullanici "autoExerciseUrl" anasayfaya gider..........................passed
 And 1 saniye bekler.........................................................passed

@@ -30,4 +30,8 @@ public class AutomationExercisePage {
     @FindBy(id = "id_gender1")
     public WebElement kayitSayfasiMrButonu;
 
+    @FindBy(xpath = "//*[text()='Account Created!']")
+    public WebElement accountCreatedYaziElementi;
+
+
 }

@@ -3,6 +3,7 @@ package stepdefinitions;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -59,15 +60,37 @@ public class AutomationExerciseStepdefinitions {
                 .perform();
         ReusableMethods.bekle(1);
         actions.sendKeys(Keys.TAB)
-                .sendKeys(faker.company().name()).perform();
+                .sendKeys(faker.company().name())
+                .sendKeys(Keys.TAB)
+                .sendKeys(faker.address().fullAddress())
+                .sendKeys(Keys.TAB)
+                .sendKeys(Keys.TAB)
+                .perform();
+        ReusableMethods.bekle(1);
+        actions.sendKeys("United States")
+                .sendKeys(Keys.TAB)
+                .sendKeys("Texas")
+                .sendKeys(Keys.TAB)
+                .sendKeys("Dallas")
+                .sendKeys(Keys.TAB)
+                .sendKeys("75001")
+                .sendKeys(Keys.TAB)
+                .sendKeys(faker.phoneNumber().cellPhone())
+                .sendKeys(Keys.TAB)
+                .sendKeys(Keys.ENTER)
+                .perform();
+
+
+
     }
     @Given("user Create Account butonuna basar")
     public void user_create_account_butonuna_basar() {
-
+        // yukaridaki step'de basildi
     }
     @Then("hesap olustugunu test eder")
     public void hesap_olustugunu_test_eder() {
 
+        Assert.assertTrue(automationExercisePage.accountCreatedYaziElementi.isDisplayed());
     }
 
     @Then("automationExercise cookies kabul eder")
