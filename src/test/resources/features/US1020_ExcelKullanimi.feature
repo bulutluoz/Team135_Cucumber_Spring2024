@@ -1,6 +1,5 @@
 Feature: US1020 excelde istenen gorevleri yapma
 
-  @wip
   Scenario: TC27 kullanici excelden istenen bilgileri alabilmeli
 
     Given kullanici baskentler exceline ulasir
@@ -11,7 +10,7 @@ Feature: US1020 excelde istenen gorevleri yapma
     And excelde kayitli ulke sayisinin 190 oldugunu test eder
     And excelde kullanilan fiziki satir sayisinin 191 oldugunu test eder
     When Tum bilgileri map olarak kaydedip
-    Then baskenti Jakarta olan ulkenin tum bilgilerini yazdirir
-    And mapi kullanarak baskenti Amsterdam olan bir ulke bulundugunu test eder
+    Then baskenti "Ankara" olan ulkenin tum bilgilerini yazdirir
+    And mapi kullanarak baskenti "Berlin" olan bir ulke bulundugunu test eder
 
 

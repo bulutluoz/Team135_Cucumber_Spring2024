@@ -93,25 +93,32 @@ public class ExcelOtomasyonStepdefinitions {
         ulkelerMap = new TreeMap<>();
 
         for (int i = 1; i <= sayfa1.getLastRowNum() ; i++) {
+            // key ingilizce baskent
+            // value aralarinda - olarak diger bilgiler olsun
 
-            String satirdakiKey = "";
-            String satirdakiValue = "";
+            String satirdakiKey = sayfa1.getRow(i).getCell(1).toString(); // ing baskent
+            String satirdakiValue =   sayfa1.getRow(i).getCell(0).toString() // ing ulke ismi
+                                    + "-"
+                                    + sayfa1.getRow(i).getCell(2).toString() // turkce ulke ismi
+                                    + "-"
+                                    + sayfa1.getRow(i).getCell(3).toString(); // turkce baskent
 
             ulkelerMap.put(satirdakiKey,satirdakiValue);
-
-            
         }
 
     }
-    @Then("baskenti Jakarta olan ulkenin tum bilgilerini yazdirir")
-    public void baskenti_jakarta_olan_ulkenin_tum_bilgilerini_yazdirir() {
 
+
+    @Then("baskenti {string} olan ulkenin tum bilgilerini yazdirir")
+    public void baskentiOlanUlkeninTumBilgileriniYazdirir(String verilenBaskent) {
+
+        System.out.println(ulkelerMap.get(verilenBaskent));
     }
 
+    @And("mapi kullanarak baskenti {string} olan bir ulke bulundugunu test eder")
+    public void mapiKullanarakBaskentiOlanBirUlkeBulundugunuTestEder(String verilenBaskent) {
 
-    @And("mapi kullanarak baskenti Amsterdam olan bir ulke bulundugunu test eder")
-    public void mapiKullanarakBaskentiAmsterdamOlanBirUlkeBulundugunuTestEder() {
-
+        Assert.assertTrue(ulkelerMap.containsKey(verilenBaskent));
 
     }
 }

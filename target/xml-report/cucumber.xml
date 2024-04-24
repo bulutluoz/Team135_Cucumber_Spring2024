@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="2.828" tests="1" skipped="0" failures="1" errors="0">
-<testcase classname="US1020 excelde istenen gorevleri yapma" name="TC27 kullanici excelden istenen bilgileri alabilmeli" time="2.711">
+<testsuite name="Cucumber" time="0.131" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="US1021 kullanici gerekli beklemeleri yaparak test yapar" name="TC28 Kullanici waitleri kullanarak senkronizasyon yapabilmeli" time="0.014">
 <failure/>
 <system-out><![CDATA[
-Given kullanici baskentler exceline ulasir..................................undefined
-Then 1.satir 2.hucredeki datayi yazdirir....................................skipped
-And 1.satir 2.hucredeki datayi bir string degiskene kaydeder................skipped
-And kaydedilen datanin "Başkent (İngilizce)" oldugunu test eder.............skipped
-Then baskenti Jakarta olan ulkenin Turkce isminin "Endonezya" oldugunu test eder.skipped
-And excelde kayitli ulke sayisinin 190 oldugunu test eder...................skipped
-And excelde kullanilan fiziki satir sayisinin 191 oldugunu test eder........skipped
-When Tum bilgileri map olarak kaydedip......................................skipped
-Then baskenti Jakarta olan ulkenin tum bilgilerini yazdirir.................skipped
-And mapi kullanarak turkce ismi Hollanda olan bir ulke bulundugunu test eder.skipped
+Given kullanici "demoQaUrl" anasayfaya gider................................passed
+Then alerts’e tiklar........................................................undefined
+And On button click, alert will appear after 5 seconds karsisindaki click me butonuna basin.skipped
+And Allert’in gorunur olmasini bekler.......................................skipped
+Then Allert uzerindeki yazinin "This alert appeared after 5 seconds" oldugunu test eder.skipped
 ]]></system-out>
 </testcase>
 </testsuite>
